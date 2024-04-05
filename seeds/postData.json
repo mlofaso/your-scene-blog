@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Moe & The Joes",
+        "content": "Moe & The Joes Live! Saturday 04/19/2024, @ Alex's Bar, door's open at 8pm. 21 +",
+        "date_created": "04/02/2024",
+        "user_id": "2"
+    },
+    {
+        "name": "The Stuff Reunion",
+        "content": "The Stuff are back for one night only! email getstuff@gmail.com for more info and RSVP!",
+        "date_created": "02/12/2024",
+        "user_id": "1"
+    },
+    {
+        "name": "Open Mic Night",
+        "content": "Open Mic Night ever Wednesday at The Riot Lounge. sign ups start at 7pm. Bring your best!",
+        "date_created": "8/16/2023",
+        "user_id": "3"
+    }
+]
