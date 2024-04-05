@@ -39,6 +39,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.static("images")); 
+
+// Route to display static src images 
+app.get("/main", (req, res) => { 
+    res.render("main"); 
+});
+
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
