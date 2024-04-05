@@ -4,48 +4,48 @@ const sequelize = require('../config/connection');
 class Post extends Model {}
 
 Post.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        content: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        date_created: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            refrences: {
-                model: 'user',
-                key: 'id',
-            },
-        },
-        comment_id: {
-            type: DataTypes.INTEGER,
-            refrences: {
-                model: 'comment',
-                key: 'id',
-            },
-        },
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        modelName: 'post',
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      refrences: {
+        model: 'user',
+        key: 'id',
+      },
+    },
+    comment_id: {
+      type: DataTypes.INTEGER,
+      refrences: {
+        model: 'comment',
+        key: 'id',
+      },
+    },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    modelName: 'post',
+  }
 );
 
 module.exports = Post;
