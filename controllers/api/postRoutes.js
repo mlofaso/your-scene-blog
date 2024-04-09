@@ -22,20 +22,22 @@ router.put('/:id', withAuth, async (req, res) => {
   try {
     const [numRowsUpdated, updatedPosts] = await Post.update(
       {
-        content: req.body.content
+        content: req.body.content,
       },
-      { 
-        where: { 
-          id: req.params.id, 
-          user_id: req.session.user_id 
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
         },
-        returning: true // This option is to return the updated post
+        returning: true, // This option is to return the updated post
       }
     );
     console.log(updatedPosts);
 
     if (numRowsUpdated === 0) {
-      res.status(404).json({ message: 'No post found with this id or unauthorized to update!' });
+      res.status(404).json({
+        message: 'No post found with this id or unauthorized to update!',
+      });
       return;
     }
 
@@ -50,10 +52,9 @@ router.delete('/:id', withAuth, async (req, res) => {
     const postData = await Post.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
-
+    console.log(postData);
     if (!postData) {
       res.status(404).json({ message: 'No post found with this id!' });
       return;
