@@ -215,13 +215,13 @@
     border: 2px solid #cccccc;
     border-radius: 50px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     opacity: 0.9;
   }
   
   .post-card h2 {
     color: rgb(190, 115, 90);
-    font-size: 1.5em;
+    font-size: 2rem;
     margin-bottom: 10px;
   }
   
