@@ -30,7 +30,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #fefefe;
     color: #ffffff;
-    background-image: url('../images/crowd.jpg');
+    background-image: url('../images/crowd2.jpg');
 
   }
   
@@ -47,7 +47,7 @@
     margin-right: 5px;
   }
   
-  /* Main content styles */
+  /* Main content styles */   
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -56,11 +56,18 @@
   
   h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 2px 2px 4px #000000;;
-    font-size: 3em;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 3.5rem;
     margin-top: 15px;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2rem;
+    color: #f0f40e;
   }
   
   footer {
@@ -79,6 +86,7 @@
     width: 20rem;
     margin: 20px;
     background-color: #ddd540;
+    opacity: 0.9;
   };
   
   .row {
@@ -100,15 +108,23 @@
   }
   
   .form {
-    background-color: #828282;
+    background-color: #fefefe;
+    text-shadow: 2px 2px 4px #000000;
     padding: 20px;
+    color: #fff200;
     border-radius: 50px;
     border: 3px solid #ccc;
     box-shadow: 2px 4px 4px #000000;
   }
+
+  .signup-form, .login-form {
+    background-image: url('../images/crowdline.jpg');
+    opacity: 0.75;
+  }
+
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px;  
   }
   
   label {
@@ -143,23 +159,25 @@
   .text-center {
     text-align: center;
     margin: 20px;
-    background-color: #ddd540;
-    border-radius: 10px;
+    /* background-color: #ddd540; */
+    background-image: url('../images/crowd3.jpg');
+    border-radius: 30px;
+    opacity: 0.85;
     border: 3px solid gray;
-    padding: 15px;
+    padding: 15px; 
     text-shadow: 2px 2px 4px #000000;
   }
   
   .text-center h2 {
-    font-size: 1.5em;
+    font-size: 2rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px #000000;
   }
   
   .text-center p {
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #955656;
   }
   
   .form-group {
@@ -175,7 +193,7 @@
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 50px;
+    border-radius: 20px;
     margin-bottom: 10px;
   }
   
@@ -193,14 +211,16 @@
   }
   
   .post-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    background-color: #fcf5d6;
+    border: 2px solid #cccccc;
     border-radius: 50px;
     padding: 20px;
     margin-bottom: 20px;
+    opacity: 0.9;
   }
   
   .post-card h2 {
+    color: rgb(190, 115, 90);
     font-size: 1.5em;
     margin-bottom: 10px;
   }
