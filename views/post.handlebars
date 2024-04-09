@@ -2,6 +2,9 @@
   <h2>{{name}}</h2>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <p class='text-area'>{{content}}</p>
+    <button class="update-btn">Update Post</button>
+    <button class="save-btn" style="display: none" data-id="{{id}}">Save update</button>
+
 
   <!-- Comments Section -->
   <div class='comments-section'>
@@ -26,8 +29,7 @@
   </div>
 </div>
 
-
+<script src="/js/updatePost.js"></script>
 <script src='/js/comment.js'></script>
 
-<script src="/js/dashboard.js"></script>
 
