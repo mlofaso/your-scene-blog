@@ -31,7 +31,6 @@
     background-color: #fefefe;
     color: #ffffff;
     background-image: url('../images/crowd2.jpg');
-
   }
   
   /* Header styles */
@@ -61,15 +60,39 @@
     margin-top: 15px;
     margin-bottom: 20px;
     text-align: center;
+    
   }
 
+
+.text-center h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2rem;
+    color: #ffffff;
+    border-radius: 50px;
+    background-color: #757575;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 24rem;
+    text-align: center;
+    width: 20rem;
+    opacity: 0.9;
+  }
+  
   h2, h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: 2px 2px 4px #000000;
     font-size: 2rem;
-    color: #f0f40e;
+    color: #ffffff;
+    border-radius: 50px;
+    background-color: #757575;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 20rem;
+    text-align: center;
+    opacity: 0.9;
+    box-shadow: 2px 4px 4px #000000;
   }
-  
   footer {
     background-color: #000000;
     color: white;
@@ -82,12 +105,42 @@
 
   .title {
     border-radius: 50px;
-    border: 3px solid #ccc;
+    border: 3px solid #ffd000;
     width: 20rem;
     margin: 20px;
+    margin-bottom: 50px;
     background-color: #ddd540;
     opacity: 0.9;
+    transform: scale(1.10);
+    box-shadow: inset -2px 6px 10px 7px rgb(255, 170, 0), 2px 4px 5px rgb(233, 7, 7);
+    position: relative;
+    animation-name: example;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   };
+
+  .title {
+
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes example {
+    0%   {background-color:yellow; left:0px; top:0px;}
+    25%  {background-color:red; left:1550px; top:0px;}
+    50%  {background-color:yellow; left:1550px; top:1175px;}
+    75%  {background-color: red; left:0px; top:1175px;}
+    100% {background-color:yellow; left:0px; top:0px;}
+  }
+
   
   .row {
     display: flex;
@@ -113,7 +166,7 @@
     padding: 20px;
     color: #fff200;
     border-radius: 50px;
-    border: 3px solid #ccc;
+    border: 2px solid #ffeb55;
     box-shadow: 2px 4px 4px #000000;
   }
 
@@ -122,6 +175,12 @@
     opacity: 0.75;
   }
 
+  .form:hover {
+    /* scale up and glowing border affect for hero image and experience section tabs*/
+    transform: scale(1.15);
+    transition: .8s ease;
+    box-shadow: inset -2px 6px 7px 4px rgb(246, 255, 0), 4px 6px 8px rgb(255, 106, 0);
+}
   
   .form-group {
     margin-bottom: 15px;  
@@ -143,8 +202,8 @@
     height: 150px;
   }
   
-  .btn {
-    background-color: #e2ff3b;
+  button {
+    background-color: #000000;
     color: white;
     padding: 8px 16px;
     border: none;
@@ -152,22 +211,28 @@
     cursor: pointer;
   }
   
-  .btn:hover {
-    background-color: #efff0c;
+  .btn:hover, button:hover {
+    background-color: #a9a9a9;
   }
+
   
   .text-center {
     text-align: center;
     margin: 20px;
     /* background-color: #ddd540; */
-    background-image: url('../images/crowd3.jpg');
+    background-image: url('../images/crowd4.jpg');
     border-radius: 30px;
     opacity: 0.85;
-    border: 3px solid gray;
+    border: 2px solid rgb(255, 238, 0);
     padding: 15px; 
     text-shadow: 2px 2px 4px #000000;
   }
   
+  .text-center:hover {
+    transform: scale(1.10);
+    transition: .9s ease;
+    box-shadow: inset -2px 6px 7px 4px rgb(246, 255, 0), 4px 6px 8px rgb(255, 106, 0);
+  }
   .text-center h2 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -206,9 +271,6 @@
     cursor: pointer;
   }
   
-  .btn:hover {
-    background-color: #e7ff0f;
-  }
   
   .post-card {
     background-color: #fcf5d6;
@@ -216,17 +278,24 @@
     border-radius: 50px;
     padding: 20px;
     margin-bottom: 10px;
-    opacity: 0.9;
+    opacity: 0.85;
+    background-image: url('../images/crowd3.jpg');
+    color: rgb(251, 251, 251);
   }
   
   .post-card h2 {
-    color: rgb(190, 115, 90);
+    color: rgb(251, 251, 251);
     font-size: 2rem;
     margin-bottom: 10px;
   }
   
+  .post-card h2:hover {
+  transform: scale(1.17);
+  transition: .7s ease;
+  }
   .post-card p {
-    color: #666;
+    color: #ffffff;
+    font-size: 1.25rem;
     margin-bottom: 10px;
   }
   
