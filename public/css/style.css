@@ -64,7 +64,7 @@
   }
 
 
-.text-center h2, h3 {
+.text-center h2, h3, h4 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: 2px 2px 4px #000000;
     font-size: 2rem;
@@ -79,7 +79,7 @@
     opacity: 0.9;
   }
   
-  h2, h3 {
+  h2, h3, h4 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: 2px 2px 4px #000000;
     font-size: 2rem;
@@ -168,6 +168,8 @@
     border-radius: 50px;
     border: 2px solid #ffeb55;
     box-shadow: 2px 4px 4px #000000;
+    background-image: url('../images/crowdline.jpg');
+    opacity: 0.8;
   }
 
   .signup-form, .login-form {
@@ -311,4 +313,10 @@
     margin-top: 10px;
     color: #999;
     font-size: 0.8em;
+  }
+
+  .video {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 30px;
   }
