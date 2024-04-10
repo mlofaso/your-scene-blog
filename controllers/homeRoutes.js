@@ -1,9 +1,15 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
+const randomUrlGen = require("random-youtube-music-video");
+
 
 router.get('/', async (req, res) => {
   try {
+    const youtubeUrl = await randomUrlGen.getRandomMusicVideoUrl();
+    console.log(youtubeUrl.replace("watch?v=", "embed/"));
+    const newYoutubeUrl = youtubeUrl.replace("watch?v=", "embed/");
+    //youtubeUrl = youtubeUrl.replace("watch?v=", "v/");
     // Get all posts and JOIN with user data
     const postData = await Post.findAll({
       include: [
@@ -20,6 +26,7 @@ router.get('/', async (req, res) => {
     res.render('homepage', {
       posts,
       logged_in: req.session.logged_in,
+      newYoutubeUrl
     });
   } catch (err) {
     res.status(500).json(err);
