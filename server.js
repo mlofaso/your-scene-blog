@@ -25,8 +25,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -39,12 +39,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static("images")); 
+// app.use(express.static("images"));
 
-// Route to display static src images 
-app.get("/main", (req, res) => { 
-    res.render("main"); 
-});
+// // Route to display static src images
+// app.get("/main", (req, res) => {
+//     res.render("main");
+// });
 
 app.use(routes);
 
