@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const videoRoutes = require('./controllers/index');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -39,12 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(express.static("images"));
-
-// // Route to display static src images
-// app.get("/main", (req, res) => {
-//     res.render("main");
-// });
+app.use('/', videoRoutes);
 
 app.use(routes);
 

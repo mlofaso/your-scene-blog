@@ -1,4 +1,318 @@
 .no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 100%;
+  }
+  
+  .no-button:hover {
+    color: #f2ff00;
+    text-decoration: underline;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Reset default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #fefefe;
+    color: #ffffff;
+    background-image: url('../images/crowd2.jpg');
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+  
+  /* Main content styles */   
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 3.5rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+
+
+.text-center h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2rem;
+    color: #ffffff;
+    border-radius: 50px;
+    background-color: #757575;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 24rem;
+    text-align: center;
+    width: 20rem;
+    opacity: 0.9;
+  }
+  
+  h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2rem;
+    color: #ffffff;
+    border-radius: 50px;
+    background-color: #757575;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 20rem;
+    text-align: center;
+    opacity: 0.9;
+    box-shadow: 2px 4px 4px #000000;
+  }
+  footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-top: 25px;
+    margin-top: 9.5rem;
+    position: relative;
+  }
+
+  .title {
+    border-radius: 50px;
+    border: 3px solid #ffd000;
+    width: 20rem;
+    margin: 20px;
+    margin-bottom: 50px;
+    background-color: #ddd540;
+    opacity: 0.9;
+    transform: scale(1.10);
+    box-shadow: inset -2px 6px 10px 7px rgb(255, 170, 0), 2px 4px 5px rgb(233, 7, 7);
+    position: relative;
+    animation-name: example;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  };
+
+  .title {
+
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes example {
+    0%   {background-color:yellow; left:0px; top:0px;}
+    25%  {background-color:red; left:1550px; top:0px;}
+    50%  {background-color:yellow; left:1550px; top:1175px;}
+    75%  {background-color: red; left:0px; top:1175px;}
+    100% {background-color:yellow; left:0px; top:0px;}
+  }
+
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    padding: 0 15px;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+  }
+  
+  .form {
+    background-color: #fefefe;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 20px;
+    color: #fff200;
+    border-radius: 50px;
+    border: 2px solid #ffeb55;
+    box-shadow: 2px 4px 4px #000000;
+  }
+
+  .signup-form, .login-form {
+    background-image: url('../images/crowdline.jpg');
+    opacity: 0.75;
+  }
+
+  .form:hover {
+    /* scale up and glowing border affect for hero image and experience section tabs*/
+    transform: scale(1.15);
+    transition: .8s ease;
+    box-shadow: inset -2px 6px 7px 4px rgb(246, 255, 0), 4px 6px 8px rgb(255, 106, 0);
+}
+  
+  .form-group {
+    margin-bottom: 15px;  
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  button {
+    background-color: #000000;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .btn:hover, button:hover {
+    background-color: #a9a9a9;
+  }
+
+  
+  .text-center {
+    text-align: center;
+    margin: 20px;
+    /* background-color: #ddd540; */
+    background-image: url('../images/crowd4.jpg');
+    border-radius: 30px;
+    opacity: 0.85;
+    border: 2px solid rgb(255, 238, 0);
+    padding: 15px; 
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .text-center:hover {
+    transform: scale(1.10);
+    transition: .9s ease;
+    box-shadow: inset -2px 6px 7px 4px rgb(246, 255, 0), 4px 6px 8px rgb(255, 106, 0);
+  }
+  .text-center h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .text-center p {
+    color: #000000;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #955656;
+  }
+  
+  .form-group {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    background-color: #00c3ff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  
+  .post-card {
+    background-color: #fcf5d6;
+    border: 2px solid #cccccc;
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 10px;
+    opacity: 0.85;
+    background-image: url('../images/crowd3.jpg');
+    color: rgb(251, 251, 251);
+  }
+  
+  .post-card h2 {
+    color: rgb(251, 251, 251);
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .post-card h2:hover {
+  transform: scale(1.17);
+  transition: .7s ease;
+  }
+  .post-card p {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .post-card-content {
+    margin-top: 10px;
+  }
+  
+  .post-card-content p {
+    line-height: 1.5;
+  }
+  
+  .post-card-footer {
+    margin-top: 10px;
+    color: #999;
+    font-size: 0.8em;
+  }
+
   background: none;
   border: none;
   padding: 0;
