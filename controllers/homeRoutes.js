@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const randomUrlGen = require("random-youtube-music-video");
+const youtubeUrl = await randomUrlGen.getRandomMusicVideoUrl();
 
 
 router.get('/', async (req, res) => {
