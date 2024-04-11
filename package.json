@@ -20,7 +20,8 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "random-youtube-music-video": "^1.0.6",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "soundcloud-node": "^0.0.10"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
