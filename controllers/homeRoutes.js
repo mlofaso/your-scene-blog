@@ -29,6 +29,7 @@ router.get('/', async (req, res) => {
       posts,
       logged_in: req.session.logged_in,
       newYoutubeUrl
+      
     });
   } catch (err) {
     res.status(500).json(err);
