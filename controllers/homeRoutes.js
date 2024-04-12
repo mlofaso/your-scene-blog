@@ -2,14 +2,15 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const randomUrlGen = require("random-youtube-music-video");
-const youtubeUrl = await randomUrlGen.getRandomMusicVideoUrl();
 
 
 router.get('/', async (req, res) => {
   try {
     const youtubeUrl = await randomUrlGen.getRandomMusicVideoUrl();
+    console.log("this is youtubeUrl", youtubeUrl)
     console.log(youtubeUrl.replace("watch?v=", "embed/"));
     const newYoutubeUrl = youtubeUrl.replace("watch?v=", "embed/");
+    console.log("This is new youtubeUrl ", newYoutubeUrl)
     //youtubeUrl = youtubeUrl.replace("watch?v=", "v/");
     // Get all posts and JOIN with user data
     const postData = await Post.findAll({
