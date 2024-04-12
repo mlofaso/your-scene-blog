@@ -1,9 +1,12 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
+// const rl = require('random-lyrics');
 
 router.get('/', async (req, res) => {
+  // const randomLyric = '';
   try {
+    // rl().then((data) => (randomLyric = data));
     // Get all posts and JOIN with user data
     const postData = await Post.findAll({
       include: [
@@ -20,6 +23,7 @@ router.get('/', async (req, res) => {
     res.render('homepage', {
       posts,
       logged_in: req.session.logged_in,
+      // randomLyric,
     });
   } catch (err) {
     res.status(500).json(err);
