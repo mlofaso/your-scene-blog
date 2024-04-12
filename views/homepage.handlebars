@@ -1,14 +1,15 @@
 <!-- Loop over each object in the posts array -->
-{{#each posts as |post| }}
-<div class="post-card">
-    <a href="/post/{{this.id}}"><h2>{{post.name}}</h2></a>
+{{#each posts as |post|}}
+  <div class='post-card'>
+    <a href='/post/{{this.id}}'><h2>{{post.name}}</h2></a>
     <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
-    <div class="post-card-content">
-        <p>{{post.content}}</p>
+    <div class='post-card-content'>
+      <p>{{post.content}}</p>
     </div>
-</div>
+  </div>
 {{/each}}
 <div class="video">
     <h4>Random Music Video</h4>
     <iframe id="myVideoIframe" width="560" height="315" src="{{youtubeUrl}}"></iframe>
 </div>
+
